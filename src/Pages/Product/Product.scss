@@ -1,0 +1,35 @@
+.main_product_div {
+    width: 100%;
+    .product_div {
+      width: 50%;
+      margin: 0 auto;
+      .product_card {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px rgb(50, 108, 196) solid;
+        &:hover{
+          background-color: rgb(118, 169, 226);
+          border-radius: 100px;
+          cursor: pointer;
+          transition: 1s;
+        }
+        p{
+            font-size: 20px;
+        }
+        h3{
+          color: red;
+          font-weight: bolder;
+          font-size: 30px;
+        }img{
+        width: 200px;
+        height: 150px;
+    }
+        }
+}
+}
+
+  
