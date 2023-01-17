@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import Navbar from "../../Layout/Navbar/Navbar";
 import axios from "axios";
 import "./Home.scss";
@@ -13,6 +14,10 @@ function Home() {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>Home</title>
+        <meta name="description" content="React project" />
+      </Helmet>
       <Navbar />
       <section>
         <div className="sectionCards">
@@ -20,7 +25,7 @@ function Home() {
             {post.map((element) => {
               return (
                 <div key={element.id} className="cardBox">
-                  <img src={element.image}></img>
+                  <img src={element.image} alt={""}></img>
                   <p>{element.title}</p>
                   <h3>{element.price}$</h3>
                   <Link to={`product/${element.id}`}>
